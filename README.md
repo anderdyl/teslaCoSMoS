@@ -1,4 +1,7 @@
-# TESLA-CoSMoS Coastal risk assessment <img src="./docs/img/logo.svg" align="left" alt="" width="120" />
+# TESLA-CoSMoS Coastal risk assessment 
+
+[![DOI](https://zenodo.org/badge/381731651.svg)](https://zenodo.org/badge/latestdoi/381731651)
+
 
 Tesla-CoSMoS is combination of the Tesla-kit package (Python3 collection of libraries for numerical and statistical calculations and methodologies for handling global climate data) and the CoSMoS (Coastal Storm Modeling System, matlab scripts to generate simulation files for Delft3D, SWAN, and XBeach).
 
