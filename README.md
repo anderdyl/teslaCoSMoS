@@ -1,8 +1,8 @@
-# TESLA-kit Coastal risk assessment <img src="./docs/img/logo.svg" align="left" alt="" width="120" />
+# TESLA-CoSMoS Coastal risk assessment <img src="./docs/img/logo.svg" align="left" alt="" width="120" />
 
-Teslakit is a Python3 collection of libraries for numerical and statistical calculations and methodologies for handling global climate data.
+Tesla-CoSMoS is combination of the Tesla-kit package (Python3 collection of libraries for numerical and statistical calculations and methodologies for handling global climate data) and the CoSMoS (Coastal Storm Modeling System, matlab scripts to generate simulation files for Delft3D, SWAN, and XBeach).
 
-The stochastic climate emulator proposed is built on the recognition that coastal conditions are the result of meteorological forcing, and that synoptic-scale meteorology is in turn a consequence of large-scale quasi-steady atmospheric and oceanic patterns (e.g., Anderson et al. 2019)
+The stochastic climate emulator proposed is built on the recognition that coastal conditions are the result of meteorological forcing, and that synoptic-scale meteorology is in turn a consequence of large-scale quasi-steady atmospheric and oceanic patterns (e.g., Anderson et al. 2019). The CoSMoS simulations downscale multi-variate environmental forcing to alongshore varying coastal conditions, allowing for hypothetical futures from the climate emulator to be useful in site-specific hazard assessments (e.g., Anderson et al. in review).
 
 
 ## Main contents
@@ -28,13 +28,24 @@ teslakit modules:
 - [plotting](./teslakit/plotting/) set of modules for teslakit data and output plotting 
 - [database](./teslakit/database.py) custom database developed to ease the multiple files required for a teslakit site 
 
-databases:
+COSMOS_lite:
+- [runD3DandSWAN](./COSMOS_lite/runD3DandSWAN/) Input file generation for Delft3D
+- [runXBeach](./COSMOS_lite/runXBeach/) Input file generation for XBeach (loosely coupled with Delft3D output)
+- [postProcess](./COSMOS_lite/postProcess/) Extracting specific model run points
+- [grids](./COSMOS_lite/clean_flow_wave_model2/) subset of CoSMoS domains
+- [utils](./COSMOS_lite/utils/) Supporting functions for model input/output
 
+databases:
+- Sea Level Pressure (SLP): https://www.ncdc.noaa.-gov/data-access/model-data/model-datasets/climate-forecast-system-version2-cfsv2
 - Sea Surface Temperature (SST): https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/
 - Madden-Julian Oscillation (MJO): http://www.bom.gov.au/climate/mjo/ 
 - Tropical Cyclones (TCs): https://www.ncdc.noaa.gov/ibtracs/
+- Tide Gauge (WL): https://tides-andcurrents.noaa.gov/stationhome.html?id=9410170
 - Waves Spectra (WVS): http://data-cbr.csiro.au/thredds/catalog/catch_all/CMAR_CAWCR-Wave_archive/CAWCR_Wave_Hindcast_aggregate/spec/catalog.xml
 
+numerical models:
+- Delft3D: https://oss.deltares.nl/web/delft3d/download
+- XBeach: https://oss.deltares.nl/web/xbeach/download
 
 ## Project Map
 
@@ -43,21 +54,10 @@ databases:
 
 ## Documentation
 
+Anderson, D., Ruggiero, P., Mendez, F.J., Barnard, P.L., Erikson, L.H., O'Neill, A.C., Merrifield, M., Rueda, A., Cagigal, L., & Marra, J. (in review) Projecting Climate Dependent Coastal Flood Risk with a Hybrid Statistical Dynamical Model.
+
 Anderson, D., Rueda, A., Cagigal, L., Antolinez, J. A. A., Mendez, F. J., & Ruggiero, P. (2019). Time‐varying emulator for short and long‐term analysis of coastal flood hazard potential. Journal of Geophysical Research: Oceans, 124. https://doi.org/10.1029/2019JC015312
 
-Anderson, D., Ruggiero, P., Mendez, F. J., Rueda, A., Antolinez, J. A., Cagigal, L., Storlazzi, C., Barnard, P., & Marra, J. (2018). TIME-VARYING EMULATOR FOR SHORT- AND LONG-TERM ANALYSIS OF COASTAL FLOODING (TESLA-FLOOD). Coastal Engineering Proceedings, 1(36), currents.4. https://doi.org/10.9753/icce.v36.currents.4
-
-Rueda, Hegermiller, Antolinez, Camus, Vitousek, Ruggiero, Barnard, Erikson, Tomas, Mendez (2017): Multi-scale climate emulator of multimodal wave spectra: MUSCLE-spectra, J. Geophy. Res. Oceans, vol. 122, pp 1400-1415.
-
-Serafin, Ruggiero (2014): Simulating extreme total water levels using a time-dependent, extreme value approach. J. Geophys. Res. Oceans, vol. 119, pp. 6305-6329.
-
-
-## Install 
-- - -
-
-Source code is currently privately hosted on GitLab at:  https://gitlab.com/geocean/teslakit/tree/master 
-
-A public "push" mirror can be located on GitHub at: https://github.com/teslakit/teslakit/tree/master 
 
 
 ### Installing from sources
