@@ -43,6 +43,9 @@ databases:
 - Tide Gauge (WL): https://tides-andcurrents.noaa.gov/stationhome.html?id=9410170
 - Waves Spectra (WVS): http://data-cbr.csiro.au/thredds/catalog/catch_all/CMAR_CAWCR-Wave_archive/CAWCR_Wave_Hindcast_aggregate/spec/catalog.xml
 
+numerical models:
+- Delft3D: https://oss.deltares.nl/web/delft3d/download
+- XBeach: https://oss.deltares.nl/web/xbeach/download
 
 ## Project Map
 
